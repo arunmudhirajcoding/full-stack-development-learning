@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox practice</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 80%;
+            height: 90vh;
+            border-radius: 10px;
+            background-color: wheat;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        .rows{
+            width: 80%;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box{
+            border: 2px solid;
+            width: 50px;            
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .loader{
+            border-radius: 50%;
+            border:  16px solid #f3f3f3;
+            border-top: 16px solid goldenrod;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0%{
+transform: rotate(0deg);
+            }
+            100%{
+transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>loader</h1>
+        <div class="loader"></div>
+    </div>
+    <div class="container">
+        <div class="rows">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+        </div>
+        <div class="rows">
+            <div class="box">D</div>
+            <div class="box">E</div>
+            <div class="box">f</div>
+        </div>
+        <div class="rows">
+            <div class="box">G</div>
+            <div class="box">H</div>
+            <div class="box">I</div>
+        </div>
+    </div>
+    
+</body>
+</html>
